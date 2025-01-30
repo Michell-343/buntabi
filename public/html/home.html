@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Aprendizaje</title>
+    <link rel="stylesheet" href="../css/style-home.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../images/logo-color.svg" alt="Logo" class="logo">
+            <div class="user-controls">
+                <button onclick="window.location.href='home.html'">Home</button>
+                <button onclick="window.location.href='dashboard.html'">Cuenta</button>
+                <submit onclick="logout()" class="cerrar">Cerrar Sesión</submit>
+            </div>
+        </div>
+    </header>
+    <div class="dashboard">
+        <aside>
+            <button onclick="showSection('inicio')">Inicio</button>
+            <button onclick="showSection('kanji')">Tema 1: Kanji</button>
+            <button onclick="showSection('lectura')">Tema 2: Lectura</button>
+            <button onclick="showSection('practica')">Tema 3: Práctica</button>
+            <button onclick="showSection('test')">Tema 4: Resultados</button>
+        </aside>
+        <main id="content">
+            <section id="inicio">
+                <h1 id="welcomeMessage"></h1>
+                
+            <p>Aquí podrás explorar diferentes temas y mejorar tus habilidades. <br>
+            <strong>Selecciona un tema para comenzar a aprender.</strong></p>
+            </section>    
+
+            <section id="kanji" class="hidden">
+                <div class="flashcard-container">
+                    <button class="arrow left-arrow" onclick="changeCard(-1)">&#10094;</button>
+      
+                    <div class="flashcard">
+                        <div id="kanji2"></div>
+                        <div id="translation"></div>
+                        <div id="readings"></div>
+                        <div id="radicals"></div>
+                    </div>
+            
+                    <button class="arrow right-arrow" onclick="changeCard(1)">&#10095;</button>
+                </div>
+            </section>
+
+            <section id="lectura" class="hidden">
+                <p class="japanese-text">今日はとても<span class="kanji" onclick="showReading(this)" data-reading="あつい" data-meaning="caluroso">暑い</span>です。</p>
+                <p class="japanese-text">今日は<span class="kanji" onclick="showReading(this)" data-reading="あつい" data-meaning="caluroso">暑い</span>です。</p>
+                <p class="japanese-text">明日は<span class="kanji" onclick="showReading(this)" data-reading="あひたあひた" data-meaning="caluroso">明日</span>です。</p>
+            </section>
+
+            <section id="practica" class="hidden">
+                <img src="../images/manga.png" alt="">
+            </section>
+
+            <section id="test" class="hidden">
+                <h1>¡Pongamos a prueba lo aprendido!</h1>
+                <div class="card" id="quiz-container">
+                    <p id="kanji-question">漢字</p>
+                    <div class="options" id="options-container">
+                        <button onclick="checkAnswer(this)">Opción 1</button>
+                        <button onclick="checkAnswer(this)">Opción 2</button>
+                        <button onclick="checkAnswer(this)">Opción 3</button>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+    <script src="../js/home.js">
+        loadQuestion();
+    </script>
+</body>
+</html>

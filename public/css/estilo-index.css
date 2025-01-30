@@ -1,0 +1,432 @@
+@font-face {
+  font-family: asap;
+  src: url(../fonts/Asap.ttf);
+}
+
+@font-face {
+  font-family: asap-italic;
+  src: url(../fonts/Asap-italic.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: asap;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2; /* Reduce el interlineado */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 10);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 8rem;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.header{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;   
+}
+.menu{
+  padding: 10px;
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* navefacion */
+.navegacion{
+  display: none;
+}
+@media (min-width:768px) {
+  .navegacion{
+      display: block;
+  }
+}
+.navegacion--lista{
+  display: flex;
+  padding-left: 0;
+  gap: 40px;
+  list-style: none;
+}
+.navegacion--lista a{
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+}
+.navegacion--lista a:hover{
+  color:#EF7E45;
+}
+.informacion{
+  flex: 1;
+  padding: 20px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+@media (min-width:768px) {
+  .informacion{
+      width: 50%;
+      margin-inline: auto;
+  }
+}
+.informacion--seccion{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.logo-img {
+  height: 50px;
+  object-fit: contain;
+  padding: 5px;
+}
+
+
+/* botones */
+
+.register-button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #f89422;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #ffffff;
+  color: #17223b;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  
+}
+
+.register {
+  padding: 10px 30px; /* Aumenta el espacio interior del botón */
+  border-radius: 12px; /* Bordes ligeramente más redondeados */
+  font-size: 1.2rem; /* Aumenta el tamaño del texto */
+  font-weight: 900; /* Mantiene el texto en negrita */
+  background-color: #f89422; /* Añade un color de fondo por defecto */
+  color: white; /* Texto blanco */
+  border: none; /* Elimina bordes */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animación suave */
+  text-decoration: none;
+}
+
+.register:hover {
+  cursor: pointer;
+  background-color: white; /* Fondo blanco al pasar el mouse */
+  color: #17223b; /* Texto oscuro */
+  transform: scale(1.1); /* Hace el botón un poco más grande al pasar el mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade sombra al pasar el mouse */
+  
+}
+
+
+#inicio {
+  color: white;
+  padding: 10px 15px;
+}
+
+main {
+
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: flex-start; /* Alinea los elementos al principio */
+  margin: 50px auto; /* Espaciado para centrar la sección verticalmente */
+  max-width: 1200px; /* Ancho máximo de la sección */
+  padding: 20px;
+  background-color: #f9f9f9; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.content-section {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: flex-start; /* Alinea los elementos al principio */
+  margin: 50px auto; /* Espaciado para centrar la sección verticalmente */
+  max-width: 1200px; /* Ancho máximo de la sección */
+  padding: 20px;
+  background-color: #f9f9f9; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  
+}
+
+.image-container {
+  flex: 0 0 40%; /* La imagen ocupa el 40% del ancho */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  padding: 10px;
+}
+
+.image-container img {
+  max-width: 100%; /* Escala la imagen para ajustarse al contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.text-container {
+  flex: 1; /* Ocupa el espacio restante */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Alinea los elementos de arriba hacia abajo */
+  justify-content: center; /* Centra los elementos verticalmente */
+  
+}
+
+
+.text-container h2, h2 {
+  font-size: 60px;
+  margin-bottom: 15px;
+  color: #17233b; /* Color del título */
+  line-height: 1.1; 
+}
+
+.text-container p {
+  font-size: 20px;
+  color: #555; /* Color del texto */
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+  font-family: asap-italic;
+}
+
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.card {
+  width: 170px;
+  height: 220px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.seccion-tema {
+  flex-direction: column;
+  align-items: center;
+  text-align: center  ;
+}
+
+.contenedor-tema {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.caja-tema {
+  color: #e56700;
+  text-align: center;
+  padding: 40px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  
+}
+
+.caja-tema:hover {
+  background-color: #eeeeee;
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.caja-tema img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.caja-menu img {
+  animation: fade-in 0.8s ease-in-out;
+}
+
+.seccion-invitación {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  margin: 0;
+}
+
+
+.invitacion-image-container {
+  margin: 0; /* Elimina márgenes del contenedor */
+  padding: 0; /* Elimina rellenos del contenedor */
+  overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+.invitacion-image-container img {
+  width: 100vw;
+  height: 100vh; /* Hace que la imagen ocupe el 100% de la altura de la pantalla */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  display: block; /* Elimina espacios en blanco adicionales */
+  width: 100vw;
+  height: auto;
+}
+
+.invitacion-text-container {
+  background-color: #e56700;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  
+}
+
+.invitacion-text-container p {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  max-width: 900px;
+}
+
+/* footer */
+
+footer {
+  background-color: #17233b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 0px;
+  height: 300px;
+  align-content: center;
+}
+
+footer img {
+  width: 150px;
+}
+
+@media (max-width: 480px) {
+  .contenedor-tema {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion-tema {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+
+  .content-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .text-container {
+    order: 2;
+  }
+}
+
+
+

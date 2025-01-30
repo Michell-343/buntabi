@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style-home.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <img src="../images/logo-color.svg" alt="Logo" class="logo">
+        <div class="user-controls">
+            <button onclick="window.location.href='home.html'">Home</button>
+            <button onclick="window.location.href='dashboard.html'">Cuenta</button>
+            <button onclick="logout()" class="cerrar">Cerrar Sesión</button>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div id="dashboard-container">
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list">
+                    <!-- Aquí se insertarán los usuarios dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        
+    </main>
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Buntabi</title>
+    <link rel="stylesheet" href="./css/estilo-index.css">
+</head>
+<body>
+    <body>
+      <header class="header">
+        <div class="menu">
+            <div class="logo">
+              <a href="index.html">
+              <img src="images/logo-color.svg" alt="Logo" class="logo-img"></a>
+            </div>
+
+            <nav class="navegacion">
+                <ul class="navegacion--lista">
+                  <li><a href="html/login.html" >Login</a></li>
+                  <li><a href="html/registro.html" class="register-button">Regístrate</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="informacion">
+            <div class="informacion--seccion">
+                <h1>EL KANJI ES UNA TRAVESÍA</h1>
+                <a href="html/registro.html" class="register">Únete</a>
+            </div>
+        </div>
+    </header>
+    
+        <main>
+            <section class="content-section">
+                <div class="image-container">
+                  <img src="images/2 onigiri.webp" alt="Descripción de la imagen">
+                </div>
+                <div class="text-container">
+                  <h2>Aprender Kanji Fácilmente</h2>
+                  <p>
+                    Aprender kanji nunca ha sido tan fácil y efectivo. Buntabi es la plataforma definitiva para estudiantes de japonés, diseñada para hacer que el estudio de los kanji sea interactivo, intuitivo y divertido. 
+                    Buntabi te ayuda a memorizar y comprender cada carácter de manera eficiente. ¡Únete a nosotros y lleva tu aprendizaje del japonés al siguiente nivel! 
+                  </p>
+                </div>
+              </section>
+
+              <section class="tarjetas">
+                <div class="card-container">
+                    <div class="card" onclick="flipCard(this)">
+                      <div class="card-inner">
+                        <div class="card-front"><img src="images/carta1-back.webp" alt=""></div>
+                        <div class="card-back"><img src="images/carta1.webp" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="card" onclick="flipCard(this)">
+                      <div class="card-inner">
+                        <div class="card-front"><img src="images/carta2-back.webp" alt=""></div>
+                        <div class="card-back"><img src="images/carta2.webp" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="card" onclick="flipCard(this)">
+                      <div class="card-inner">
+                        <div class="card-front"><img src="images/carta3-back.webp" alt=""></div>
+                        <div class="card-back"><img src="images/carta3.webp" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="card" onclick="flipCard(this)">
+                      <div class="card-inner">
+                        <div class="card-front"><img src="images/carta4-back.webp" alt=""></div>
+                        <div class="card-back"><img src="images/carta4.webp" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="card" onclick="flipCard(this)">
+                      <div class="card-inner">
+                        <div class="card-front"><img src="images/carta4-back_1.webp" alt=""></div>
+                        <div class="card-back"><img src="images/carta5.webp" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <script>
+                    function flipCard(card) {
+                      const inner = card.querySelector('.card-inner');
+                      inner.classList.toggle('flipped');
+                    }
+                  </script>
+              </section>
+
+              <section class="content-section">
+                <div class="text-container">
+                    <h2>
+                      Domina los Kanjis Básicos</h2>
+                    <p>
+                      En Buntabi, explorarás cuatro temas fundamentales: Ubicación, Estaciones, Comida y Días de la Semana, abarcando los kanjis esenciales del nivel N5. ¡Empieza tu viaje en el mundo de los kanjis con nosotros! 
+                    </p>
+                  </div>
+                <div class="image-container">
+                  <img src="images/3 Saori.webp" alt="Descripción de la imagen">
+                </div>
+              </section>
+
+              <section id="seccion-tema" class="seccion-tema">
+                    <h2>Temas</h2>
+
+                <div class="contenedor-tema">
+                    <div class="caja-tema">
+                        <figure>
+                            <img src="images/4 tema1.webp" alt="">
+                            <h3>Capitulo 1 - Ubicación 場所</h3>
+                            <p>En este capitulo, se aprenderan los kanjis mas utilizados para ubicarse. </p>
+                        </figure>
+                    </div>
+                    <div class="caja-tema">
+                        <figure>
+                            <img src="images/5 tema2.webp" alt="">
+                            <h3>Capitulo 2 - Dias de la semana 曜日</h3>
+                            <p>En este capitulo, se aprenderan los kanjis mas utilizados para ubicarse. </p>
+                        </figure>
+                    </div>
+                    <div class="caja-tema">
+                        <figure>
+                            <img src="images/6 tema3.webp" alt="">
+                            <h3>Capitulo 3 - Estaciones 季節</h3>
+                            <p>En este capitulo, se aprenderan los kanjis mas utilizados para ubicarse.</p>
+                        </figure>
+                    </div>
+                    <div class="caja-tema">
+                        <figure>
+                            <img src="images/7 tema 4.webp" alt="">
+                            <h3>Capitulo 4 - Comida 食べ物</h3>
+                            <p>En este capitulo, se aprenderan los kanjis mas utilizados para ubicarse.</p>
+                        </figure>
+                    </div>
+                </section>
+        </main>
+        
+        <section class="seccion-invitacion">
+            <div class="invitacion-image-container">
+              <img src="images/8 imgbanner.webp" alt="Descripción de la imagen">
+            </div>
+            <div class="invitacion-text-container">
+              <p>
+                ¿Qué esperas para ser parte de esta travesía? <strong>¡Regístrate ahora!</strong>
+            </p>
+            <a href="html/registro.html" class="register">Únete</a>
+            <a href="html/login.html" id="inicio">o inicia sesion</a>
+            </div>
+          </section>
+    
+        <footer>
+            <img src="images/logo-color.svg" alt=""><br>
+            <p>Contacto@Buntabi.com.co</p>
+            <p>&copy; 2024 - Michell Inagan</p>
+        </footer>
+    
+</body>
+</html>
+

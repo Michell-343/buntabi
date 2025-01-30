@@ -1,0 +1,437 @@
+
+@font-face {
+    font-family: asap;
+    src: url(../fonts/Asap.ttf);
+  }
+  
+  @font-face {
+    font-family: asap-italic;
+    src: url(../fonts/Asap-italic.ttf);
+  }
+
+body {
+    font-family: asap;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    align-items: center;
+}
+
+/* General Header Styling */
+header {
+    background-color: #17233b; /* Fondo oscuro para el header */
+    color: white; /* Texto blanco */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Container for Header Content */
+.header-container {
+    display: flex; /* Flexbox para alinear elementos horizontalmente */
+    justify-content: space-between; /* Espaciado entre logo y controles */
+    align-items: center; /* Centrado vertical */
+}
+
+
+/* Logo Styling */
+.logo {
+    height: 50px; /* Ajusta el tamaño del logo */
+    max-width: 100%; /* Escalado proporcional */
+}
+
+/* User Controls Styling */
+.user-controls {
+    display: flex; /* Flexbox para los botones */
+    gap: 15px; /* Espaciado entre los botones */
+}
+
+.user-controls button {
+    background-color: #283c63; /* Fondo gris oscuro para los botones */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    font-family: asap;
+}
+
+.user-controls button:hover {
+    background-color: #EF7E45; /* Fondo más claro al pasar el ratón */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 1550px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+main p{
+    font-size: 2.5em;
+}
+
+#lectura p {
+    font-size: 2.5em;
+
+}
+
+#welcomeMessage {
+    font-size: 4em;
+    font-weight: bold;
+    color: #EF7E45;
+}
+
+#practica img {
+    width: 70vw; /* 70% del ancho de la pantalla */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Evita espacios no deseados */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.user-controls .cerrar {
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    color: white;
+    text-decoration: none;
+    background-color: #f76c6c;
+    font-size: 13px;
+}
+
+.user-controls .cerrar:hover {
+    background-color: #EF7E45; /* Fondo más claro al pasar el ratón */
+}
+
+/* Estilo del dashboard */
+.dashboard {
+    display: flex;
+    background-color:#f4f4f9;
+    height: calc(100vh - 60px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+aside {
+    width: 200px;
+    background-color:white; /* Color de fondo claro */
+    color: #283c63; /* Texto oscuro para mejor contraste */
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+aside button {
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    background-color: #EF7F45; /* Azul claro */
+    color: #ffffff; /* Texto oscuro */
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+aside button:hover {
+    background-color: #283c63; /* Azul más claro al pasar el mouse */
+    color: white;
+    transform: translateY(-2px); /* Efecto sutil de elevación */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Estilo de  las flashcard */
+.flashcard-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flashcard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    min-width: 300px;
+    text-align: center;
+}
+
+.left-arrow {
+    margin-right: 20px;
+}
+
+.right-arrow {
+    margin-left: 20px;
+}
+
+#kanji2 {
+    font-size: 3em;
+}
+
+#translation, #readings, #radicals {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+
+/* seccion de lectura */
+
+
+.japanese-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.japanese-text .kanji {
+    color: #d9534f;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.japanese-text .kanji:hover {
+    text-decoration: underline;
+}
+
+.flip-card {
+    width: 150px;
+    height: 150px;
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.flip-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.quiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.draggable {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: grab;
+}
+
+.dropzone {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
+#dashboard-container {
+    max-width: 1200px;
+}
+
+#user-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#user-table th, #user-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#user-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#logoutBtn {
+    background-color: #f76c6c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#logoutBtn:hover {
+    background-color: #d94d4d;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+    /* Ajustes para el header en pantallas pequeñas */
+    .logo {
+        height: 40px;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .user-controls {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .user-controls button {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Ajustes para el menú lateral en móviles */
+    aside {
+        width: 20%;
+        padding: 10px;
+        text-align: center;
+
+    }
+
+    aside button {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Ajustes para el contenido principal en móviles */
+    main {
+        margin: 10px;
+        padding: 15px;
+        font-size: 14px;
+        align-items: center;
+        text-align: center;
+    }
+
+    main p {
+        font-size: 1.8em;
+    }
+
+    #lectura p {
+        font-size: 1.8em;
+    }
+
+    /* Ajustes para las imágenes en móviles */
+    #practica img {
+        width: 90vw;
+        height: auto;
+    }
+}
+
+
+/* kanji */
+
+.card {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.options button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #17233b;
+    color: white;
+    cursor: pointer;
+}
+.options button:hover {
+    background-color: #0056b3;
+}
+
+.flashcard-container {
+    display: flex;
+    align-items: center;
+}
+
+.flashcard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    min-width: 300px;
+    text-align: center;
+}
+
+.arrow {
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.left-arrow {
+    margin-right: 20px;
+}
+
+.right-arrow {
+    margin-left: 20px;
+}
+
+#kanji {
+    font-size: 3em;
+}
+
+#translation, #readings, #radicals {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+
