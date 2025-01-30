@@ -6,6 +6,8 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
 import { ConectarDB } from './config/database.js';
 import adminRoutes from './routes/adminRoutes.js'; // Aquí importas las rutas de admin
+
+//para subir a vercel
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -14,6 +16,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+//llegar a los directorios, S6
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
