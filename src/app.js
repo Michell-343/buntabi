@@ -42,6 +42,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);  
 
 
+//configuracion para leer los archivos estaticos
+app.get('/', (req, res) => res.sendFile(path.join(path.dirname(__filename), '../', 'public','index.html')));
+app.use(express.static(path.join(path.dirname(__filename), '../', 'public')));
 
 
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
