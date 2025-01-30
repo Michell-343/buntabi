@@ -55,7 +55,7 @@ function drop(event) {
 const kanjiData = [
     { kanji: "日", options: ["Sol", "Luna", "Agua"], answer: "Sol" },
     { kanji: "月", options: ["Montaña", "Luna", "Fuego"], answer: "Luna" },
-    { kanji: "水", options: ["Agua", "Árbol", "Tierra"], answer: "Agua" },
+    { kanji: "水", options: ["Tierra", "Árbol", "Agua"], answer: "Agua" },
     { kanji: "食", options: ["Comida", "Luna", "Sol"], answer: "Comida" }
 ];
 

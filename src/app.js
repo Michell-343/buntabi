@@ -7,7 +7,7 @@ import authRoutes from './routes/authRoutes.js';
 import { ConectarDB } from './config/database.js';
 import adminRoutes from './routes/adminRoutes.js'; // Aquí importas las rutas de admin
 
-//para subir a vercel
+
 import path from 'path';
 import { fileURLToPath } from 'url';
 
