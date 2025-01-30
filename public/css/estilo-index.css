@@ -22,7 +22,7 @@ body {
 
 h1 {
   font-size: 4rem;
-  line-height: 1.2; /* Reduce el interlineado */
+  line-height: 1.2; 
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 10);
   background-size: cover;
   background-position: center;
@@ -133,23 +133,23 @@ h1 {
 }
 
 .register {
-  padding: 10px 30px; /* Aumenta el espacio interior del botón */
-  border-radius: 12px; /* Bordes ligeramente más redondeados */
-  font-size: 1.2rem; /* Aumenta el tamaño del texto */
-  font-weight: 900; /* Mantiene el texto en negrita */
-  background-color: #f89422; /* Añade un color de fondo por defecto */
-  color: white; /* Texto blanco */
-  border: none; /* Elimina bordes */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Animación suave */
+  padding: 10px 30px;
+  border-radius: 12px; 
+  font-size: 1.2rem; 
+  font-weight: 900; 
+  background-color: #f89422; 
+  color: white; 
+  border: none; 
+  transition: transform 0.3s ease, background-color 0.3s ease; 
   text-decoration: none;
 }
 
 .register:hover {
   cursor: pointer;
-  background-color: white; /* Fondo blanco al pasar el mouse */
-  color: #17223b; /* Texto oscuro */
-  transform: scale(1.1); /* Hace el botón un poco más grande al pasar el mouse */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade sombra al pasar el mouse */
+  background-color: white; 
+  color: #17223b; 
+  transform: scale(1.1); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   
 }
 
@@ -161,47 +161,47 @@ h1 {
 
 main {
 
-  align-items: center; /* Centra los elementos verticalmente */
-  justify-content: flex-start; /* Alinea los elementos al principio */
-  margin: 50px auto; /* Espaciado para centrar la sección verticalmente */
-  max-width: 1200px; /* Ancho máximo de la sección */
+  align-items: center; 
+  justify-content: flex-start; 
+  margin: 50px auto; 
+  max-width: 1200px; 
   padding: 20px;
-  background-color: #f9f9f9; /* Fondo claro */
-  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f9f9f9;
+  border-radius: 10px; 
 }
 
 .content-section {
   display: flex;
-  align-items: center; /* Centra los elementos verticalmente */
-  justify-content: flex-start; /* Alinea los elementos al principio */
-  margin: 50px auto; /* Espaciado para centrar la sección verticalmente */
-  max-width: 1200px; /* Ancho máximo de la sección */
+  align-items: center; 
+  justify-content: flex-start; 
+  margin: 50px auto; 
+  max-width: 1200px; 
   padding: 20px;
-  background-color: #f9f9f9; /* Fondo claro */
-  border-radius: 10px; /* Bordes redondeados */
+  background-color: #f9f9f9; 
+  border-radius: 10px;
   
 }
 
 .image-container {
-  flex: 0 0 40%; /* La imagen ocupa el 40% del ancho */
+  flex: 0 0 40%; 
   display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
+  justify-content: center; 
+  align-items: center;
   padding: 10px;
 }
 
 .image-container img {
-  max-width: 100%; /* Escala la imagen para ajustarse al contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  border-radius: 10px; /* Bordes redondeados para la imagen */
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
 }
 
 .text-container {
-  flex: 1; /* Ocupa el espacio restante */
+  flex: 1; 
   padding: 20px;
   display: flex;
-  flex-direction: column; /* Alinea los elementos de arriba hacia abajo */
-  justify-content: center; /* Centra los elementos verticalmente */
+  flex-direction: column; 
+  justify-content: center; 
   
 }
 
@@ -209,14 +209,14 @@ main {
 .text-container h2, h2 {
   font-size: 60px;
   margin-bottom: 15px;
-  color: #17233b; /* Color del título */
+  color: #17233b;
   line-height: 1.1; 
 }
 
 .text-container p {
   font-size: 20px;
-  color: #555; /* Color del texto */
-  line-height: 1.6; /* Mejora la legibilidad del texto */
+  color: #555; 
+  line-height: 1.6; 
   font-family: asap-italic;
 }
 
@@ -345,16 +345,16 @@ main {
 
 
 .invitacion-image-container {
-  margin: 0; /* Elimina márgenes del contenedor */
-  padding: 0; /* Elimina rellenos del contenedor */
-  overflow: hidden; /* Asegura que no haya desbordamiento */
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden; 
 }
 
 .invitacion-image-container img {
   width: 100vw;
-  height: 100vh; /* Hace que la imagen ocupe el 100% de la altura de la pantalla */
-  object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-  display: block; /* Elimina espacios en blanco adicionales */
+  height: 100vh; 
+  object-fit: cover; 
+  display: block;
   width: 100vw;
   height: auto;
 }

@@ -24,9 +24,6 @@ function showReading(element) {
     alert(`Lectura: ${element.dataset.reading}\nSignificado: ${element.dataset.meaning}`);
 }
 
-function flipCard(card) {
-    card.classList.toggle('flipped');
-}
 
 function prevFlashcard() {
     currentFlashcard = (currentFlashcard - 1 + flashcards.length) % flashcards.length;

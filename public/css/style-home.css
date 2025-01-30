@@ -19,8 +19,8 @@ body {
 
 /* General Header Styling */
 header {
-    background-color: #17233b; /* Fondo oscuro para el header */
-    color: white; /* Texto blanco */
+    background-color: #17233b; 
+    color: white; 
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
@@ -28,37 +28,37 @@ header {
 
 /* Container for Header Content */
 .header-container {
-    display: flex; /* Flexbox para alinear elementos horizontalmente */
-    justify-content: space-between; /* Espaciado entre logo y controles */
-    align-items: center; /* Centrado vertical */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
 }
 
 
 /* Logo Styling */
 .logo {
-    height: 50px; /* Ajusta el tamaño del logo */
-    max-width: 100%; /* Escalado proporcional */
+    height: 50px;
+    max-width: 100%; 
 }
 
 /* User Controls Styling */
 .user-controls {
-    display: flex; /* Flexbox para los botones */
-    gap: 15px; /* Espaciado entre los botones */
+    display: flex; 
+    gap: 15px; 
 }
 
 .user-controls button {
-    background-color: #283c63; /* Fondo gris oscuro para los botones */
-    color: white; /* Texto blanco */
-    border: none; /* Sin bordes */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    background-color: #283c63; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
     font-family: asap;
 }
 
 .user-controls button:hover {
-    background-color: #EF7E45; /* Fondo más claro al pasar el ratón */
+    background-color: #EF7E45; 
 }
 
 main {
@@ -87,18 +87,18 @@ main p{
 }
 
 #practica img {
-    width: 70vw; /* 70% del ancho de la pantalla */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Evita espacios no deseados */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+    width: 70vw; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .user-controls .cerrar {
-    border: none; /* Sin bordes */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
     color: white;
     text-decoration: none;
     background-color: #f76c6c;
@@ -106,7 +106,7 @@ main p{
 }
 
 .user-controls .cerrar:hover {
-    background-color: #EF7E45; /* Fondo más claro al pasar el ratón */
+    background-color: #EF7E45; 
 }
 
 /* Estilo del dashboard */
@@ -120,8 +120,8 @@ main p{
 
 aside {
     width: 200px;
-    background-color:white; /* Color de fondo claro */
-    color: #283c63; /* Texto oscuro para mejor contraste */
+    background-color:white; 
+    color: #283c63; 
     padding: 20px;
     margin-top: 20px;
     margin-left: 20px;
@@ -135,8 +135,8 @@ aside button {
     font-weight: bold;
     display: block;
     width: 100%;
-    background-color: #EF7F45; /* Azul claro */
-    color: #ffffff; /* Texto oscuro */
+    background-color: #EF7F45; 
+    color: #ffffff; 
     border: none;
     padding: 10px;
     margin: 10px 0;
@@ -147,9 +147,9 @@ aside button {
 }
 
 aside button:hover {
-    background-color: #283c63; /* Azul más claro al pasar el mouse */
+    background-color: #283c63;
     color: white;
-    transform: translateY(-2px); /* Efecto sutil de elevación */
+    transform: translateY(-2px); 
 }
 
 main {
@@ -308,7 +308,7 @@ main {
 /* media queries */
 
 @media screen and (max-width: 768px) {
-    /* Ajustes para el header en pantallas pequeñas */
+   
     .logo {
         height: 40px;
     }
@@ -329,7 +329,7 @@ main {
         font-size: 14px;
     }
 
-    /* Ajustes para el menú lateral en móviles */
+
     aside {
         width: 20%;
         padding: 10px;
@@ -343,7 +343,7 @@ main {
         padding: 8px;
     }
 
-    /* Ajustes para el contenido principal en móviles */
+
     main {
         margin: 10px;
         padding: 15px;
@@ -360,7 +360,7 @@ main {
         font-size: 1.8em;
     }
 
-    /* Ajustes para las imágenes en móviles */
+
     #practica img {
         width: 90vw;
         height: auto;
