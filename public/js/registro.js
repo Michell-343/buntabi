@@ -1,5 +1,5 @@
 // frontend/public/js/register.js
-const url='buntabi-kanji-michells-projects-3ad50caa.vercel.app/api/auth/registro';
+const url='http://localhost:3000/api/auth/registro';
 
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();

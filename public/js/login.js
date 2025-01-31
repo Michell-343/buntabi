@@ -1,4 +1,4 @@
-const url = 'buntabi-kanji-michells-projects-3ad50caa.vercel.app/api/auth/login'; // URL del backend
+const url = 'http://localhost:3000/api/auth/login'; // URL del backend
 
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();
