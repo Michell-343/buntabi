@@ -1,5 +1,5 @@
 // frontend/public/js/register.js
-const url='http://localhost:3000/api/auth/registro';
+const url='https://buntabi.vercel.app/api/auth/registro';
 
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();

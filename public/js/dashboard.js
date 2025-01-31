@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/api/admin/usuarios';
+const url = 'https://buntabi.vercel.app/api/admin/usuarios';
 
 function logout() {
   localStorage.removeItem('token');

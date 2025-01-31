@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/api/auth/login'; // URL del backend
+const url = 'https://buntabi.vercel.app/api/auth/login'; // URL del backend
 
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();

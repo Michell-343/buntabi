@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/api/admin/usuarios';
+const url = 'https://buntabi.vercel.app/api/admin/usuarios';
 const token = localStorage.getItem('token'); // Obtener el token almacenado en el localStorage
 
 
