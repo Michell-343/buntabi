@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  window.mostrarFormularioEdicion = function (nombre, apellido, usuario, email, role) {
+  window.mostrarFormularioEdicion = function (id, nombre, apellido, usuario, email, role) {
     document.getElementById('edit-form').style.display = 'block';
     document.getElementById('edit-id').value = id;
     document.getElementById('edit-nombre').value = nombre;
