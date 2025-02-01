@@ -6,47 +6,22 @@ function logout() {
   window.location.href = '../index.html';
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
-  const token = localStorage.getItem('token'); // Obtener el token almacenado en el localStorage
-  
-  // Si no hay token, redirige al login
+  const token = localStorage.getItem('token');
+
   if (!token) {
     window.location.href = '../index.html';
   }
 
-  // Verificar si el usuario tiene el rol 'admin' en el token
-  const decodedToken = JSON.parse(atob(token.split('.')[1])); // Decodificamos el token para obtener los datos
+  const decodedToken = JSON.parse(atob(token.split('.')[1]));
   const userRole = decodedToken.role;
-  const usuario = decodedToken.usuario; // Extraemos el nombre de usuario
-  const email = decodedToken.email; // Extraemos el email del usuario
 
-  // Mostrar los datos del usuario en el icono de cuenta
-  const accountIcon = document.getElementById('account-icon');
-  const userInfoDiv = document.getElementById('user-info');
-  accountIcon.textContent = `${usuario.charAt(0).toUpperCase()}`; // Muestra el nombre de usuario en el icono
-
-
-
-  accountIcon.addEventListener('click', () => {
-    // Al hacer clic en el icono, mostramos los detalles del usuario
-    userInfoDiv.innerHTML = `
-       <p><strong>Usuario:</strong> ${nombre}</p>
-        <p><strong>Usuario:</strong> ${apellido}</p>
-      <p><strong>Usuario:</strong> ${usuario}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Rol:</strong> ${userRole}</p>
-    `;
-    userInfoDiv.style.display = 'block'; // Muestra los detalles
-  });
-
-  // Función para obtener la lista de usuarios si el rol es 'admin'
   async function obtenerUsuarios() {
     try {
       const response = await fetch(url, {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${token}`, // Enviar el token en los headers
+          'Authorization': `Bearer ${token}`,
         },
       });
 
@@ -54,21 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
         throw new Error('No autorizado o error al obtener usuarios');
       }
 
-      const users = await response.json(); // Devuelve la lista de usuarios en formato JSON
-      mostrarUsuarios(users); // Llamar a la función para mostrar los usuarios
+      const users = await response.json();
+      mostrarUsuarios(users);
     } catch (error) {
       console.error('Error al obtener los usuarios:', error);
-      // Si hay error, mostrar un mensaje en el dashboard
       document.getElementById('user-list').innerHTML = '<p>No tienes permisos para ver los usuarios o ocurrió un error.</p>';
     }
   }
 
-  // Función para renderizar los usuarios en el HTML
   function mostrarUsuarios(users) {
     const userList = document.getElementById('user-list');
-    userList.innerHTML = ''; // Limpiar la lista de usuarios (por si hay datos previos)
+    userList.innerHTML = '';
 
-    // Recorremos todos los usuarios y los mostramos en una tabla
     users.forEach(user => {
       const tr = document.createElement('tr');
       tr.innerHTML = `
@@ -77,23 +49,80 @@ document.addEventListener('DOMContentLoaded', () => {
         <td>${user.usuario}</td>
         <td>${user.email}</td>
         <td>${user.role}</td>
-
+        <td>
+          <button onclick="mostrarFormularioEdicion('${user._id}', '${user.nombre}', '${user.apellido}', '${user.usuario}', '${user.email}', '${user.role}')">Editar</button>
+          <button onclick="eliminarUsuario('${user._id}')">Eliminar</button>
+        </td>
       `;
       userList.appendChild(tr);
     });
   }
 
-  // Mostrar mensaje de bienvenida
-  //document.getElementById('welcomeMessage').textContent = '¡Bienvenido al Dashboard!';
-  document.getElementById('welcomeMessage').textContent = `¡Bienvenido ${usuario}!`;
-    
+  window.mostrarFormularioEdicion = function (nombre, apellido, usuario, email, role) {
+    document.getElementById('edit-form').style.display = 'block';
+    document.getElementById('edit-id').value = id;
+    document.getElementById('edit-nombre').value = nombre;
+    document.getElementById('edit-apellido').value = apellido;
+    document.getElementById('edit-usuario').value = usuario;
+    document.getElementById('edit-email').value = email;
+    document.getElementById('edit-role').value = role;
+  };
 
-  // Cargar la lista de usuarios solo si el rol es admin
+  window.editarUsuario = async function () {
+    const id = document.getElementById('edit-id').value;
+    const nombre = document.getElementById('edit-nombre').value;
+    const apellido = document.getElementById('edit-apellido').value;
+    const usuario = document.getElementById('edit-usuario').value;
+    const email = document.getElementById('edit-email').value;
+    const role = document.getElementById('edit-role').value;
+
+    try {
+      const response = await fetch(`${url}/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+      body: JSON.stringify({ id, nombre, apellido, usuario, email, role })
+      });
+
+
+      if (!response.ok) {
+        throw new Error('Error al actualizar el usuario');
+      }
+
+      alert('Usuario actualizado correctamente');
+      document.getElementById('edit-form').style.display = 'none';
+      obtenerUsuarios();
+    } catch (error) {
+      console.error('Error al actualizar usuario:', error);
+    }
+  };
+
+  window.eliminarUsuario = async function (id) {
+    if (confirm('¿Estás seguro de eliminar este usuario?')) {
+      try {
+        const response = await fetch(`${url}/${id}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Error al eliminar el usuario');
+        }
+
+        alert('Usuario eliminado correctamente');
+        obtenerUsuarios();
+      } catch (error) {
+        console.error('Error al eliminar usuario:', error);
+      }
+    }
+  };
+
   if (userRole === 'admin') {
     obtenerUsuarios();
   }
 
-
-  
 
 });

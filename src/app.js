@@ -6,8 +6,6 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
 import { ConectarDB } from './config/database.js';
 import adminRoutes from './routes/adminRoutes.js'; // Aquí importas las rutas de admin
-
-
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -37,7 +35,6 @@ ConectarDB();
 
 // Rutas
 app.use('/api/auth', authRoutes);
-
 // Rutas de administración (solo admin puede acceder a estas)
 app.use('/api/admin', adminRoutes);  
 

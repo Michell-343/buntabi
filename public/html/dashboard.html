@@ -18,26 +18,46 @@
     </div>
 </header>
 
-    <main>
-        <div id="dashboard-container">
-            <table id="user-table">
-                <thead>
-                    <tr>
-                        <th>Usuario</th>
-                        <th>Email</th>
-                        <th>Rol</th>
-                    </tr>
-                </thead>
-                <tbody id="user-list">
-                    <!-- Aquí se insertarán los usuarios dinámicamente -->
-                </tbody>
-            </table>
-        </div>
+<main>
+    <div id="dashboard-container">
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Usuario</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="user-list">
+                <!-- Aquí se insertarán los usuarios dinámicamente -->
+            </tbody>
+        </table>
+    </div>
 
-        
-    </main>
+    <!-- Formulario de edición -->
+    <div id="edit-form" style="display: none;">
+        <h3>Editar Usuario</h3>
+        <input type="hidden" id="edit-id">
+        <label>Nombre: <input type="text" id="edit-nombre"></label><br>
+        <label>Apellido: <input type="text" id="edit-apellido"></label><br>
+        <label>Usuario: <input type="text" id="edit-usuario"></label><br>
+        <label>Email: <input type="email" id="edit-email"></label><br>
+        <label>Rol: 
+            <select id="edit-role">
+                <option value="admin">Admin</option>
+                <option value="usuario">Usuario</option>
+            </select>
+        </label><br>
+        <button onclick="editarUsuario()">Guardar Cambios</button>
+        <button onclick="document.getElementById('edit-form').style.display='none'">Cancelar</button>
+    </div>
 
-    <script src="../js/dashboard.js"></script>
+</main>
+
+<script src="../js/dashboard.js"></script>
 
 </body>
 </html>
